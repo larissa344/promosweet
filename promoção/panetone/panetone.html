@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             background-color: #f7f7f7;
-            background-image: url('https://img.freepik.com/vetores-gratis/fundo-gradiente-de-ano-novo_23-2149151377.jpg?w=900&t=st=1725735111~exp=1725735711~hmac=6d3a283bb096da4aec657e83b8962bd66f6448f56eb9aaef8adde426103a8662'); /* Imagem de Natal aplicada nas áreas em branco */
+            background-image: url('https://img.freepik.com/vetores-gratis/fundo-gradiente-de-ano-novo_23-2149151377.jpg?w=900&t=st=1725735111~exp=1725735711~hmac=6d3a283bb096da4aec657e83b8962bd66f6448f56eb9aaef8adde426103a8662');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -43,17 +43,17 @@
             margin: 0;
         }
 
-        .products {
+        .products, .caixotes {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
             padding: 40px 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+            background-color: rgba(255, 255, 255, 0.9);
         }
 
         .product {
-            background-color: #ffd700; /* Cor dourada */
+            background-color: #ffd700;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -71,60 +71,15 @@
             font-size: 22px;
             margin-top: 15px;
             margin-bottom: 10px;
-            color: #333; /* Cor inicial do texto */
-            transition: color 0.3s; /* Efeito suave na mudança de cor */
+            color: #333;
+            transition: color 0.3s;
         }
 
         .product h3:hover {
-            color: #c62828; /* Cor vermelha ao passar o mouse */
+            color: #c62828;
         }
 
         .product p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        .caixotes {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
-        }
-
-        .caixotes .caixote {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .caixote {
-            background-color: #ffd700; /* Cor dourada */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        .caixote img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .caixote h3 {
-            font-size: 22px;
-            margin-top: 15px;
-            margin-bottom: 10px;
-            color: #333; /* Cor inicial do texto */
-            transition: color 0.3s; /* Efeito suave na mudança de cor */
-        }
-
-        .caixote h3:hover {
-            color: #c62828; /* Cor vermelha ao passar o mouse */
-        }
-
-        .caixote p {
             font-size: 16px;
             color: #666;
         }
@@ -156,22 +111,29 @@
         }
 
         @media (max-width: 768px) {
-            .products {
+            .products, .caixotes {
                 flex-direction: column;
             }
 
-            .caixote {
+            .product {
                 width: 100%;
             }
         }
 
-        /* Estilo para exibir os caixotes 3 em 3 */
         @media (min-width: 769px) {
-            .caixotes .caixote:nth-child(3n+1) {
-                margin-left: 0;
+            .caixotes {
+                display: flex;
+                flex-wrap: wrap;
             }
-            .caixotes .caixote:nth-child(3n) {
+            .caixotes .product {
+                width: 300px;
+                margin-bottom: 20px;
+            }
+            .caixotes .product:nth-child(3n) {
                 margin-right: 0;
+            }
+            .caixotes .product:nth-child(3n+1) {
+                margin-left: 0;
             }
         }
     </style>
@@ -205,77 +167,66 @@
 </div>
 
 <div class="caixotes">
-    <div class="caixote">
-        <img src="../fotos/panetone1.jpg" alt="Caixote Panetone 1">
-        <h3>Caixote Panetone 1</h3>
-        <p>Descrição do caixote de panetone 1.</p>
+    <div class="product">
+        <img src="../fotos/panetone1.jpg" alt="Caixote 1">
+        <h3>Caixote 1</h3>
+        <p>Descrição do Caixote 1.</p>
     </div>
-    <div class="caixote">
-        <img src="../fotos/panetone2.jpg" alt="Caixote Panetone 2">
-        <h3>Caixote Panetone 2</h3>
-        <p>Descrição do caixote de panetone 2.</p>
+    <div class="product">
+        <img src="../fotos/panetone2.jpg" alt="Caixote 2">
+        <h3>Caixote 2</h3>
+        <p>Descrição do Caixote 2.</p>
     </div>
-    <div class="caixote">
-        <img src="../fotos/panetone3.jpg" alt="Caixote Panetone 3">
-        <h3>Caixote Panetone 3</h3>
-        <p>Descrição do caixote de panetone 3.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone4.jpg" alt="Caixote Panetone 4">
-        <h3>Caixote Panetone 4</h3>
-        <p>Descrição do caixote de panetone 4.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone5.jpg" alt="Caixote Panetone 5">
-        <h3>Caixote Panetone 5</h3>
-        <p>Descrição do caixote de panetone 5.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone6.jpg" alt="Caixote Panetone 6">
-        <h3>Caixote Panetone 6</h3>
-        <p>Descrição do caixote de panetone 6.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone7.jpg" alt="Caixote Panetone 7">
-        <h3>Caixote Panetone 7</h3>
-        <p>Descrição do caixote de panetone 7.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone8.jpg" alt="Caixote Panetone 8">
-        <h3>Caixote Panetone 8</h3>
-        <p>Descrição do caixote de panetone 8.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone9.jpg" alt="Caixote Panetone 9">
-        <h3>Caixote Panetone 9</h3>
-        <p>Descrição do caixote de panetone 9.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone10.jpg" alt="Caixote Panetone 10">
-        <h3>Caixote Panetone 10</h3>
-        <p>Descrição do caixote de panetone 10.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone11.jpg" alt="Caixote Panetone 11">
-        <h3>Caixote Panetone 11</h3>
-        <p>Descrição do caixote de panetone 11.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone12.jpg" alt="Caixote Panetone 12">
-        <h3>Caixote Panetone 12</h3>
-        <p>Descrição do caixote de panetone 12.</p>
-    </div>
-    <div class="caixote">
-        <img src="../fotos/panetone13.jpg" alt="Caixote Panetone 13">
-        <h3>Caixote Panetone 13</h3>
-        <p>Descrição do caixote de panetone 13.</p>
+    <div class="product">
+        <img src="../fotos/panetone3.jpg" alt="Caixote 3">
+        <h3>Caixote 3</h3>
+        <p>Descrição do Caixote 3.</p>
     </div>
 </div>
 
-<div class="contact">
-    <h2>Entre em Contato</h2>
-    <a href="https://wa.me/11963387123" target="_blank">Envie uma Mensagem pelo WhatsApp</a>
+<div class="caixotes">
+    <div class="product">
+        <img src="../fotos/panetone4.jpg" alt="Caixote 4">
+        <h3>Caixote 4</h3>
+        <p>Descrição do Caixote 4.</p>
+    </div>
+    <div class="product">
+        <img src="../fotos/panetone5.jpg" alt="Caixote 5">
+        <h3>Caixote 5</h3>
+        <p>Descrição do Caixote 5.</p>
+    </div>
+    <div class="product">
+        <img src="../fotos/panetone6.jpg" alt="Caixote 6">
+        <h3>Caixote 6</h3>
+        <p>Descrição do Caixote 6.</p>
+    </div>
 </div>
 
-</body>
-</html>
+<div class="caixotes">
+    <div class="product">
+        <img src="../fotos/panetone7.jpg" alt="Caixote 7">
+        <h3>Caixote 7</h3>
+        <p>Descrição do Caixote 7.</p>
+    </div>
+    <div class="product">
+        <img src="../fotos/panetone8.jpg" alt="Caixote 8">
+        <h3>Caixote 8</h3>
+        <p>Descrição do Caixote 8.</p>
+    </div>
+    <div class="product">
+        <img src="../fotos/panetone9.jpg" alt="Caixote 9">
+        <h3>Caixote 9</h3>
+        <p>Descrição do Caixote 9.</p>
+    </div>
+</div>
+
+<div class="caixotes">
+    <div class="product">
+        <img src="../fotos/panetone10.jpg" alt="Caixote 10">
+        <h3>Caixote 10</h3>
+        <p>Descrição do Caixote 10.</p>
+    </div>
+    <div class="product">
+        <img src="../fotos/panetone11.jpg" alt="Caixote 11">
+        <h3>Caixote 11</h3>
+        <p>Descrição do Caixote
