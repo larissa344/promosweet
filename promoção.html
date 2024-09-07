@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas de Natal - Panetones e Bolos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #c62828;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .intro {
+            background-color: #c62828;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 22px;
+            margin: 0;
+        }
+
+        .portfolio {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .portfolio h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .portfolio ul li {
+            font-size: 20px;
+            margin: 10px 20px;
+            background-color: #fff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .portfolio ul li:hover {
+            transform: scale(1.05);
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 22px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .contact {
+            background-color: #c62828;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .contact h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            background-color: #f44336;
+            padding: 15px 30px;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .contact a:hover {
+            background-color: #d32f2f;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio ul {
+                flex-direction: column;
+            }
+
+            .portfolio ul li {
+                margin: 10px 0;
+            }
+
+            .products {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Promoções de Natal</h1>
+</header>
+
+<div class="intro">
+    <p>Bem-vindo às melhores ofertas de Natal! Escolha entre deliciosos cubos de panetone, panetos e bolos de Natal!</p>
+</div>
+
+<div class="portfolio">
+    <h2>Portfólio</h2>
+    <ul>
+        <li>Panetone</li>
+        <li>Bolos de Natal</li>
+        <li>Cubos de Panetone</li>
+    </ul>
+</div>
+
+<!-- Seção de produtos -->
+<div class="products">
+    <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Panetone">
+        <h3>Panetone Tradicional</h3>
+        <p>O clássico panetone recheado com frutas cristalizadas. Perfeito para o Natal!</p>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Bolo de Natal">
+        <h3>Bolo de Natal</h3>
+        <p>Delicioso bolo decorado com motivos natalinos, feito com ingredientes selecionados.</p>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Cubo de Panetone">
+        <h3>Cubo de Panetone</h3>
+        <p>Cubos de panetone prontos para servir. Uma ótima opção para festas e reuniões.</p>
+    </div>
+</div>
+
+<div class="contact">
+    <h2>Entre em contato para fazer seu pedido</h2>
+    <a href="https://api.whatsapp.com/send?phone=11963387123&text=Olá,%20quero%20fazer%20um%20pedido!">11 96338-7123</a>
+</div>
+
+</body>
+</html>
