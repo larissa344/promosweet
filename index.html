@@ -45,18 +45,20 @@
 
         .main-content {
             display: flex;
-            flex-wrap: wrap; /* Permite que o layout seja ajustado em telas menores */
-            justify-content: space-between; /* Distribui o espaço entre os itens */
+            flex-direction: column; /* Coloca o conteúdo principal em coluna */
+            align-items: center;
         }
 
         .portfolio {
             background-color: #c62828; /* Cor de fundo vermelho */
             color: white;
             padding: 20px;
-            width: 100%;
             margin-right: 0;
             font-family: 'DM Sans', sans-serif; /* Fonte personalizada */
             box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            margin-bottom: 20px;
+            width: 100%; /* Ocupa toda a largura da tela */
+            text-align: center; /* Centraliza o conteúdo */
         }
 
         .portfolio h2 {
@@ -68,17 +70,19 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex; /* Coloca os itens em linha */
+            justify-content: center; /* Centraliza os itens horizontalmente */
         }
 
         .portfolio ul li {
             font-size: 18px;
-            margin: 5px 0;
+            margin: 5px 20px; /* Adiciona espaço entre os itens */
         }
 
         .container {
-            flex: 1;
             padding: 20px;
             box-sizing: border-box; /* Inclui padding no tamanho total */
+            width: 100%; /* Ocupa toda a largura da tela */
         }
 
         .price {
@@ -118,8 +122,8 @@
         }
 
         @media (max-width: 768px) {
-            .portfolio {
-                width: 100%;
+            .portfolio ul li {
+                margin: 5px 10px; /* Ajusta o espaço entre itens para telas menores */
             }
 
             .brand-logos img {
@@ -140,6 +144,15 @@
         }
 
         @media (max-width: 480px) {
+            .portfolio ul {
+                flex-direction: column; /* Coloca os itens em coluna em telas muito pequenas */
+                align-items: center;
+            }
+
+            .portfolio ul li {
+                margin: 10px 0; /* Aumenta o espaço entre os itens para melhor visualização */
+            }
+
             .intro {
                 font-size: 20px; /* Ajusta ainda mais o tamanho da fonte para telas muito pequenas */
             }
