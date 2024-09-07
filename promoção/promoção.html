@@ -69,11 +69,12 @@
             padding: 15px 25px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
+            transition: transform 0.2s, color 0.2s;
         }
 
         .portfolio ul li:hover {
             transform: scale(1.05);
+            color: #c62828; /* Cor vermelha ao passar o mouse */
         }
 
         .products {
@@ -86,7 +87,7 @@
         }
 
         .product {
-            background-color: #e3b22f; /* Cor dourada */
+            background-color: #ffd700; /* Cor dourada */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -104,6 +105,12 @@
             font-size: 22px;
             margin-top: 15px;
             margin-bottom: 10px;
+            color: #333; /* Cor inicial do texto */
+            transition: color 0.3s; /* Efeito suave na mudança de cor */
+        }
+
+        .product h3:hover {
+            color: #c62828; /* Cor vermelha ao passar o mouse */
         }
 
         .product p {
