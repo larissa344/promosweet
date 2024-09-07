@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             background-color: #f7f7f7;
-            background-image: url('https://img.freepik.com/vetores-gratis/fundo-gradiente-de-ano-novo_23-2149151377.jpg?w=900&t=st=1725735111~exp=1725735711~hmac=6d3a283bb096da4aec657e83b8962bd66f6448f56eb9aaef8adde426103a8662'); /* Imagem de Natal aplicada nas áreas em branco */
+            background-image: url('https://img.freepik.com/vetores-gratis/fundo-gradiente-de-ano-novo_23-2149151377.jpg?w=900&t=st=1725735111~exp=1725735711~hmac=6d3a283bb096da4aec657e83b8962bd66f6448f56eb9aaef8adde426103a8662');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -43,59 +43,17 @@
             margin: 0;
         }
 
-        .portfolio {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
-        }
-
-        .portfolio h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .portfolio ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .portfolio ul li {
-            font-size: 20px;
-            margin: 10px 20px;
-            background-color: #fff;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, color 0.2s;
-        }
-
-        .portfolio ul li:hover {
-            transform: scale(1.05);
-            color: #c62828; /* Cor vermelha ao passar o mouse */
-        }
-
-        .portfolio ul li a {
-            text-decoration: none;
-            color: inherit; /* Herda a cor do elemento pai */
-            display: block;
-            height: 100%;
-            width: 100%;
-        }
-
-        .products {
+        .products, .caixotes {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
             padding: 40px 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+            background-color: rgba(255, 255, 255, 0.9);
         }
 
-        .product {
-            background-color: #ffd700; /* Cor dourada */
+        .product, .caixote {
+            background-color: #ffd700;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -103,25 +61,25 @@
             text-align: center;
         }
 
-        .product img {
+        .product img, .caixote img {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
 
-        .product h3 {
+        .product h3, .caixote h3 {
             font-size: 22px;
             margin-top: 15px;
             margin-bottom: 10px;
-            color: #333; /* Cor inicial do texto */
-            transition: color 0.3s; /* Efeito suave na mudança de cor */
+            color: #333;
+            transition: color 0.3s;
         }
 
-        .product h3:hover {
-            color: #c62828; /* Cor vermelha ao passar o mouse */
+        .product h3:hover, .caixote h3:hover {
+            color: #c62828;
         }
 
-        .product p {
+        .product p, .caixote p {
             font-size: 16px;
             color: #666;
         }
@@ -153,16 +111,30 @@
         }
 
         @media (max-width: 768px) {
-            .portfolio ul {
+            .products, .caixotes {
                 flex-direction: column;
             }
 
-            .portfolio ul li {
-                margin: 10px 0;
+            .product, .caixote {
+                width: 100%;
             }
+        }
 
-            .products {
-                flex-direction: column;
+        /* Estilo para exibir os caixotes 3 em 3 */
+        @media (min-width: 769px) {
+            .caixotes {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .caixotes .caixote {
+                width: 300px;
+                margin-bottom: 20px;
+            }
+            .caixotes .caixote:nth-child(3n) {
+                margin-right: 0;
+            }
+            .caixotes .caixote:nth-child(3n+1) {
+                margin-left: 0;
             }
         }
     </style>
@@ -174,19 +146,9 @@
 </header>
 
 <div class="intro">
-    <p>Bem-vindo às melhores ofertas de Natal! Escolha entre deliciosos cubos de panetone, panetos e bolos de Natal!</p>
+    <p>Bem-vindo às melhores ofertas de Natal! Escolha entre deliciosos panetones natalinos!</p>
 </div>
 
-<div class="portfolio">
-    <h2>Portfólio</h2>
-    <ul>
-        <li><a href="panetone/panetone.html">Panetone</a></li>
-        <li><a href="bolos/bolos.html">Bolos de Natal</a></li>
-        <li><a href="cubos/cubos.html">Cubos de Panetone</a></li>
-    </ul>
-</div>
-
-<!-- Seção de produtos -->
 <div class="products">
     <div class="product">
         <img src="https://cdn.awsli.com.br/2500x2500/1330/1330028/produto/193287112/2c1a5f7b48.jpg" alt="Panetone Tradicional">
@@ -205,9 +167,89 @@
     </div>
 </div>
 
+<div class="caixotes">
+    <div class="caixote">
+        <img src="../fotos/panetone1.jpg" alt="Caixote 1">
+        <h3>Caixote 1</h3>
+        <p>Descrição do Caixote 1.</p>
+    </div>
+    <div class="caixote">
+        <img src="../fotos/panetone2.jpg" alt="Caixote 2">
+        <h3>Caixote 2</h3>
+        <p>Descrição do Caixote 2.</p>
+    </div>
+    <div class="caixote">
+        <img src="../fotos/panetone3.jpg" alt="Caixote 3">
+        <h3>Caixote 3</h3>
+        <p>Descrição do Caixote 3.</p>
+    </div>
+</div>
+
+<div class="caixotes">
+    <div class="caixote">
+        <img src="../fotos/panetone4.jpg" alt="Caixote 4">
+        <h3>Caixote 4</h3>
+        <p>Descrição do Caixote 4.</p>
+    </div>
+    <div class="caixote">
+        <img src="../fotos/panetone5.jpg" alt="Caixote 5">
+        <h3>Caixote 5</h3>
+        <p>Descrição do Caixote 5.</p>
+    </div>
+    <div class="caixote">
+        <img src="../fotos/panetone6.jpg" alt="Caixote 6">
+        <h3>Caixote 6</h3>
+        <p>Descrição do Caixote 6.</p>
+    </div>
+</div>
+
+<div class="caixotes">
+    <div class="caixote">
+        <img src="../fotos/panetone7.jpg" alt="Caixote 7">
+        <h3>Caixote 7</h3>
+        <p>Descrição do Caixote 7.</p>
+    </div>
+    <div class="caixote">
+        <img src="../fotos/panetone8.jpg" alt="Caixote 8">
+        <h3>Caixote 8</h3>
+        <p>Descrição do Caixote 8.</p>
+    </div>
+    <div class="caixote">
+        <img src="../fotos/panetone9.jpg" alt="Caixote 9">
+        <h3>Caixote 9</h3>
+        <p>Descrição do Caixote 9.</p>
+    </div>
+</div>
+
+<div class="caixotes">
+    <div class="caixote">
+        <img src="../fotos/panetone10.jpg" alt="Caixote 10">
+        <h3>Caixote 10</h3>
+        <p>Descrição do Caixote 10.</p>
+    </div>
+    <div class="caixote">
+        <img src="../fotos/panetone11.jpg" alt="Caixote 11">
+        <h3>Caixote 11</h3>
+        <p>Descrição do Caixote 11.</p>
+    </div>
+    <div class="caixote">
+        <img src="../fotos/panetone12.jpg" alt="Caixote 12">
+        <h3>Caixote 12</h3>
+        <p>Descrição do Caixote 12.</p>
+    </div>
+</div>
+
+<div class="caixotes">
+    <div class="caixote">
+        <img src="../fotos/panetone13.jpg" alt="Caixote 13">
+        <h3>Caixote 13</h3>
+        <p>Descrição do Caixote 13.</p>
+    </div>
+</div>
+
 <div class="contact">
-    <h2>Entre em contato para fazer seu pedido</h2>
-    <a href="https://api.whatsapp.com/send?phone=11963387123&text=Olá,%20quero%20fazer%20um%20pedido!">11 96338-7123</a>
+    <h2>Entre em Contato</h2>
+    <a href="https://wa.me/11963387123" target="_blank">Envie uma Mensagem pelo WhatsApp</a>
 </div>
 
 </body>
