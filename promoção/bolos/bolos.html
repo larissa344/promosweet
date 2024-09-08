@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-        <style>
+    <style>
         body {
             font-family: 'DM Sans', sans-serif;
             margin: 0;
@@ -58,8 +58,9 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: calc(33.333% - 40px); /* Ajuste para espaçamento */
             text-align: center;
+            box-sizing: border-box;
         }
 
         .product img {
@@ -114,10 +115,12 @@
         @media (max-width: 768px) {
             .products, .caixotes {
                 flex-direction: column;
+                align-items: center;
             }
 
             .product {
-                width: 100%;
+                width: 90%;
+                max-width: 400px; /* Limita a largura para telas pequenas */
             }
         }
 
@@ -127,17 +130,12 @@
                 flex-wrap: wrap;
             }
             .caixotes .product {
-                width: 300px;
+                width: calc(33.333% - 20px); /* Ajuste para espaçamento */
                 margin-bottom: 20px;
             }
-            .caixotes .product:nth-child(3n) {
-                margin-right: 0;
-            }
-            .caixotes .product:nth-child(3n+1) {
-                margin-left: 0;
-            }
+        }
 
-                    /* Estilo do botão de voltar */
+        /* Estilo do botão de voltar */
         .back-button {
             display: inline-block;
             margin: 20px;
@@ -159,10 +157,7 @@
         .back-button::before {
             content: '← '; /* Seta antes do texto */
         }
-
-        }
     </style>
-    
 </head>
 <body>
 
@@ -171,26 +166,28 @@
 </header>
 
 <a href="javascript:history.back()" class="back-button">Voltar</a>
-    
+
 <div class="intro">
     <p>Bem-vindo às melhores ofertas de Natal! Escolha entre deliciosos Bolos!</p>
 </div>
-
 
 <div class="caixotes">
     <div class="product">
         <img src="../fotos/bolo1.jpg" alt="Caixote 1">
         <h3>Chocolate com Nozes</h3>
-        <p>Delicioso chocolate artesanal, recheado com pedaços de nozes selecionadas, perfeito para quem busca uma combinação irresistível de crocância e doçura. Ideal para presentear ou saborear em momentos especiais.</p>
+        <p>Delicioso chocolate artesanal, recheado com pedaços de nozes selecionadas, perfeito para quem busca uma combinação irresistível de crocância e doçura.</p>
     </div>
     <div class="product">
         <img src="../fotos/bolo2.jpg" alt="Caixote 2">
         <h3>Nozes</h3>
-        <p>Nozes selecionadas, crocantes e saborosas, perfeitas para incrementar receitas ou degustar como um lanche nutritivo</p>
+        <p>Nozes selecionadas, crocantes e saborosas, perfeitas para incrementar receitas ou degustar como um lanche nutritivo.</p>
     </div>
     <div class="product">
         <img src="../fotos/bolo3.jpg" alt="Caixote 3">
         <h3>Pão de Mel</h3>
-        <p>Delicioso pão de mel, macio e recheado com especiarias, coberto com uma camada de chocolate. Um clássico irresistível para momentos especiais.</p>
+        <p>Delicioso pão de mel, macio e recheado com especiarias, coberto com uma camada de chocolate.</p>
     </div>
 </div>
+
+</body>
+</html>
