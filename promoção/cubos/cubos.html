@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-     <style>
+    <style>
         body {
             font-family: 'DM Sans', sans-serif;
             margin: 0;
@@ -43,10 +43,10 @@
             margin: 0;
         }
 
-        .products, .caixotes {
+        .caixotes {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
             padding: 40px 20px;
             background-color: rgba(255, 255, 255, 0.9);
@@ -57,8 +57,9 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: calc(33.333% - 40px); /* Ajuste para espaçamento */
             text-align: center;
+            box-sizing: border-box;
         }
 
         .product img {
@@ -111,32 +112,11 @@
         }
 
         @media (max-width: 768px) {
-            .products, .caixotes {
-                flex-direction: column;
-            }
-
             .product {
-                width: 100%;
+                width: calc(100% - 40px); /* Ajuste para telas menores */
             }
         }
 
-        @media (min-width: 769px) {
-            .caixotes {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            .caixotes .product {
-                width: 300px;
-                margin-bottom: 20px;
-            }
-            .caixotes .product:nth-child(3n) {
-                margin-right: 0;
-            }
-            .caixotes .product:nth-child(3n+1) {
-                margin-left: 0;
-            }
-
-                    /* Estilo do botão de voltar */
         .back-button {
             display: inline-block;
             margin: 20px;
@@ -158,8 +138,6 @@
         .back-button::before {
             content: '← '; /* Seta antes do texto */
         }
-
-        }
     </style>
 </head>
 <body>
@@ -169,22 +147,24 @@
 </header>
 
 <a href="javascript:history.back()" class="back-button">Voltar</a>
-    
+
 <div class="intro">
     <p>Bem-vindo às melhores ofertas de Natal! Escolha entre deliciosos Cubos de chocolates e frutas!</p>
 </div>
 
-
 <div class="caixotes">
     <div class="product">
-        <img src="../fotos/cubo.png" alt="Caixote 1">
+        <img src="../fotos/cubo.png" alt="Cubo de Chocolate">
         <h3>Cubo de Chocolate</h3>
         <p>Cubos de chocolate puro, perfeitos para compartilhar ou saborear a qualquer momento. Uma opção prática e deliciosa para o Natal.</p>
     </div>
 
-
-  <div class="product">
-        <img src="../fotos/cubo2.png" alt="Caixote 1">
+    <div class="product">
+        <img src="../fotos/cubo2.png" alt="Cubo de Frutas">
         <h3>Cubo de Frutas</h3>
         <p>Cubos recheados com frutas secas e cristalizadas, oferecendo um sabor equilibrado e natural. Ideal para presentes e reuniões de Natal.</p>
     </div>
+</div>
+
+</body>
+</html>
