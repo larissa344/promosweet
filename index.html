@@ -59,12 +59,6 @@
             gap: 20px;
         }
 
-        .contact-info {
-            font-size: 20px;
-            margin-top: 20px;
-            color: #333;
-        }
-
         a {
             font-size: 20px;
             color: white;
@@ -99,6 +93,27 @@
         .cta-button:hover {
             background-color: #C0951C; /* Dourado mais escuro no hover */
         }
+
+        .contact-info {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 20px;
+            color: #333;
+            background-color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info a {
+            color: #c62828;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -112,13 +127,15 @@
         <span>Marilan</span>
         <span>Casa Suiça</span>
     </div>
-    <div class="contact-info">
-        <p>Entre em contato: <a href="tel:11963387123">11 96338-7123</a></p>
-    </div>
 </div>
 
 <!-- Botão Fixo Bonito na Parte Inferior -->
 <a href="promoção/promoção.html" class="cta-button">Ir para Promoção</a>
+
+<!-- Informações de Contato na Parte Inferior Direita -->
+<div class="contact-info">
+    Entre em contato: <a href="tel:11963387123">11 96338-7123</a>
+</div>
 
 </body>
 </html>
