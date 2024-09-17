@@ -7,64 +7,127 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sevillana&display=swap" rel="stylesheet">
-<style>
-    /* Outros estilos permanecem os mesmos */
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-image: url('https://img.freepik.com/fotos-premium/fundo-vermelho-de-natal-com-neve-caindo-e-flocos-de-neve_270100-2400.jpg?w=900'); /* Imagem de fundo de Natal */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #333;
+        }
 
-    .cta-button {
-        position: fixed;
-        bottom: 70px; /* Aumenta a distância do botão em relação ao rodapé */
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #DAA520;
-        color: white;
-        padding: 15px 30px;
-        font-size: 20px;
-        border: none;
-        border-radius: 50px;
-        text-align: center;
-        cursor: pointer;
-        transition: background-color 0.2s;
-    }
+        .container {
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 50px; /* Espaço acima do botão */
+        }
 
-    .cta-button:hover {
-        background-color: #C0951C;
-    }
+        h1 {
+            font-family: 'Sevillana', cursive; /* Fonte personalizada */
+            font-size: 48px;
+            color: #c62828;
+            margin-bottom: 10px;
+        }
 
-    .contact-info {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        font-size: 20px;
-        color: #333;
-        background-color: #ffffff;
-        padding: 10px 15px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+        h2 {
+            font-size: 36px;
+            color: #c62828;
+            margin-bottom: 20px;
+        }
 
-    .contact-info a {
-        color: #c62828;
-        text-decoration: none;
-    }
+        .outlet {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
 
-    .contact-info a:hover {
-        text-decoration: underline;
-    }
+        .brands {
+            font-size: 20px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-    /* Estilos específicos para telas menores */
-    @media (max-width: 768px) {
+        a {
+            font-size: 20px;
+            color: white;
+            background-color: #DAA520; /* Cor dourada do botão */
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: #C0951C; /* Dourado mais escuro no hover */
+        }
+
         .cta-button {
-            font-size: 18px;
-            padding: 10px 20px;
-            bottom: 90px; /* Aumenta a distância entre o botão e as informações de contato */
+            position: fixed;
+            bottom: 70px; /* Aumenta a distância entre o botão e o rodapé */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #DAA520; /* Cor dourada */
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 50px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #C0951C; /* Dourado mais escuro no hover */
         }
 
         .contact-info {
-            font-size: 16px;
-            padding: 8px 12px;
+            position: fixed;
+            bottom: 20px; /* Mantém o contato mais próximo ao rodapé */
+            right: 20px;
+            font-size: 20px;
+            color: #333;
+            background-color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-    }
-</style>
+
+        .contact-info a {
+            color: #c62828;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos específicos para telas menores */
+        @media (max-width: 768px) {
+            .cta-button {
+                font-size: 18px;
+                padding: 12px 25px;
+                bottom: 90px; /* Aumenta a distância entre o botão e as informações de contato */
+            }
+
+            .contact-info {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
 
