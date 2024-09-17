@@ -25,11 +25,13 @@
         }
 
         .container {
-            padding: 40px;
+            padding: 30px;
             background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             margin-bottom: 50px; /* Espaço acima do botão */
+            max-width: 90%; /* Limita a largura em telas pequenas */
+            box-sizing: border-box;
         }
 
         h1 {
@@ -118,14 +120,62 @@
         /* Estilos específicos para telas menores */
         @media (max-width: 768px) {
             .cta-button {
-                font-size: 18px;
-                padding: 12px 25px;
+                font-size: 16px;
+                padding: 12px 20px;
             }
 
             .contact-info {
-                font-size: 18px;
+                font-size: 16px;
                 right: 10px;
                 top: 10px;
+            }
+
+            h1 {
+                font-size: 36px; /* Reduz o tamanho do título */
+            }
+
+            h2 {
+                font-size: 28px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .outlet {
+                font-size: 20px;
+            }
+
+            .brands {
+                font-size: 18px;
+            }
+        }
+
+        /* Estilos específicos para telas muito pequenas (celulares pequenos) */
+        @media (max-width: 480px) {
+            .cta-button {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+
+            .contact-info {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .outlet {
+                font-size: 18px;
+            }
+
+            .brands {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 20px;
             }
         }
     </style>
@@ -134,7 +184,7 @@
 
 <!-- Informações de Contato no topo -->
 <div class="contact-info">
-    Entre em contato: <a href="tel:11992064148">11 99206-4148</a>
+    Entre em contato: <a href="tel:11963387123">11 96338-7123</a>
 </div>
 
 <div class="container">
