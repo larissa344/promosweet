@@ -76,7 +76,7 @@
 
         .cta-button {
             position: fixed;
-            bottom: 70px; /* Aumenta a distância entre o botão e o rodapé */
+            bottom: 20px; /* Mantém o botão fixo na parte inferior */
             left: 50%;
             transform: translateX(-50%);
             background-color: #DAA520; /* Cor dourada */
@@ -95,8 +95,8 @@
         }
 
         .contact-info {
-            position: fixed;
-            bottom: 20px; /* Mantém o contato mais próximo ao rodapé */
+            position: absolute;
+            top: 20px; /* Move o contato para o topo */
             right: 20px;
             font-size: 20px;
             color: #333;
@@ -120,16 +120,22 @@
             .cta-button {
                 font-size: 18px;
                 padding: 12px 25px;
-                bottom: 90px; /* Aumenta a distância entre o botão e as informações de contato */
             }
 
             .contact-info {
                 font-size: 18px;
+                right: 10px;
+                top: 10px;
             }
         }
     </style>
 </head>
 <body>
+
+<!-- Informações de Contato no topo -->
+<div class="contact-info">
+    Entre em contato: <a href="tel:11992064148">11 99206-4148</a>
+</div>
 
 <div class="container">
     <h1>Promo Sweet</h1>
@@ -142,13 +148,8 @@
     </div>
 </div>
 
-<!-- Botão Fixo Bonito na Parte Inferior -->
+<!-- Botão Fixo na Parte Inferior -->
 <a href="promoção/promoção.html" class="cta-button">Ir para Promoção</a>
-
-<!-- Informações de Contato na Parte Inferior Direita -->
-<div class="contact-info">
-    Entre em contato: <a href="tel:11963387123">11 99206-4841</a>
-</div>
 
 </body>
 </html>
